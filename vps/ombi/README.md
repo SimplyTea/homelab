@@ -10,8 +10,3 @@ Media requests for household members. Requests appear in Jellyfin once approved.
 | Guest | `[approval rule]` | 1080p video, FLAC audio |
 
 Audio is FLAC for every role. Compressed audio is only used when an admin overrides the setting.
-
-## Setup
-
-
-## Proof to add
