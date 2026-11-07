@@ -1,0 +1,25 @@
+[Unit]
+Description=AdGuard Home: Network-level blocker
+ConditionFileIsExecutable=/home/Tea/AdGuardHome/AdGuardHome
+
+After=syslog.target network-online.target 
+
+[Service]
+StartLimitInterval=5
+StartLimitBurst=10
+ExecStart=/home/Tea/AdGuardHome/AdGuardHome "-s" "run"
+
+WorkingDirectory=/home/Tea/AdGuardHome
+
+
+
+StandardOutput=journal
+StandardError=journal
+
+Restart=always
+
+RestartSec=10
+EnvironmentFile=-/etc/sysconfig/AdGuardHome
+
+[Install]
+WantedBy=multi-user.target
